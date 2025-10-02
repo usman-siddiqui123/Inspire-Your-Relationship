@@ -32,13 +32,14 @@ export default function CoursePageLayout() {
     return (
         <div className="bg-black min-h-screen text-white">
             
-            {/* 1. Hero Image Section */}
-            <section className="relative w-full h-[60vh] md:h-screen overflow-hidden"> 
-                {/* Mobile par height kam (h-[60vh]), desktop par full screen (md:h-screen) */}
+<section className="relative w-full pt-[56.25%] md:pt-[30%] overflow-hidden"> 
+                {/* pt-[56.25%] = 16:9 Aspect Ratio (Mobile) */}
+                {/* md:pt-[30%] = Thoda chota Aspect Ratio (Desktop) */}
                 <img 
                     src={heroImage} 
                     alt="Hero Image" 
-                    className="w-full h-full object-cover object-center" 
+                    // Image ko absolute position karke container ke andar fit kiya
+                    className="absolute inset-0 w-full h-full object-cover object-center" 
                 />
             </section>
 
